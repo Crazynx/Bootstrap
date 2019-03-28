@@ -1,3 +1,10 @@
 body {
   padding-top: 55px;
 }
+
+.creeper-background {
+  background-image: url("../images/creeper.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+}
