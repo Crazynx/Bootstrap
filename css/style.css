@@ -9,6 +9,13 @@ body {
   background-size: auto;
 }
 
+.dirt-background {
+  background-image: url("../images/dirt.jpg");
+  background-repeat: repeat;
+  background-position: top;
+  background-size: cover;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -28,5 +35,5 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
+  background: green;
 }
