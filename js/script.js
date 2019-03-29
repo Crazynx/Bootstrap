@@ -18,6 +18,8 @@ function validateInput() {
   var nameReg = /^[a-z ,.'-]+$/mi;
   var adressReg = /^[A-Z]{1}?[a-z]+[\s]{1}?[0-9]/;
 
+  $("#passwordsNoMatchRegister").hide();
+
   if (!nameReg.test($("#inputName").val())) {
     $("#passwordsNoMatchRegister").show();
   }
