@@ -1,5 +1,10 @@
 body {
+  margin: 0;
+  height: 100%;
   padding-top: 55px;
+  background-image: url("../images/dirt.jpg");
+  background-position: bottom;
+  background-size: auto;
 }
 
 .creeper-background {
