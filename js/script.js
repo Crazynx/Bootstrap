@@ -15,16 +15,14 @@ $("#inputAdress").hover(
 );
 
 function validateInput() {
-  var nameReg = /^[a-z ,.'-]+$/gmi;
+  var nameReg = /^[a-z ,.'-]+$/mi;
   var adressReg = /^[A-Z]{1}?[a-z]+[\s]{1}?[0-9]/;
 
-  if (nameReg.test($("#inputName").val())) {
-    console.log("success");
-  } else {
+  if (!nameReg.test($("#inputName").val())) {
     $("#passwordsNoMatchRegister").show();
-    console.log("not success");
   }
-  if ($("#inputAdress").val()) {
 
+  if (!adressReg.test($("#inputAdress").val())) {
+    $("#passwordsNoMatchRegister").show();
   }
 }
