@@ -1,12 +1,7 @@
-html, body {
+body {
   margin: 0;
   height: 100%;
-  background-image: url("../images/dirt.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-body {
+  background-image: url("../images/plank.png");
   padding-top: 55px;
 }
 
