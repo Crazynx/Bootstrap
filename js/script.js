@@ -6,17 +6,17 @@ $("#inputName").hover(
   }
 );
 
-$("#inputAdress").hover(
+$("#inputAddress").hover(
  function() {
-    $('#collapseAdressInfo').collapse('show');
+    $('#collapseAddressInfo').collapse('show');
   }, function() {
-    $('#collapseAdressInfo').collapse('hide');
+    $('#collapseAddressInfo').collapse('hide');
   }
 );
 
 function validateInput() {
   var nameReg = /^[a-z ,.'-]+$/mi;
-  var adressReg = /^[A-Z]{1}?[a-z]+[\s]{1}?[0-9]/;
+  var addressReg = /^[A-Z]{1}?[a-z]+[\s]{1}?[0-9]/;
 
   $("#passwordsNoMatchRegister").hide();
 
@@ -24,7 +24,7 @@ function validateInput() {
     $("#passwordsNoMatchRegister").show();
   }
 
-  if (!adressReg.test($("#inputAdress").val())) {
+  if (!addressReg.test($("#inputAddress").val())) {
     $("#passwordsNoMatchRegister").show();
   }
 }
