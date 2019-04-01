@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- Navbar -->
     <div class="row">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="home.html">Minecraft</a>
@@ -43,11 +44,74 @@
         </div>
       </nav>
     </div>
+    <!-- Item list -->
+    <div class="container-fluid">
+      <div class="list-group bg-light" id="myList" role="tablist">
+        <!-- General item -->
+        <a class="list-group-item list-group-item-action align-items-center justify-content-between d-flex"
+        data-toggle="list" href="#" role="tab" id="generalItem">
+          General
+          <span class="badge badge-primary badge-pill">6</span>
+        </a>
+        <!-- Events item -->
+        <a class="list-group-item list-group-item-action align-items-center justify-content-between d-flex"
+        data-toggle="list" href="#events" role="tab" id="eventsItem">
+          Events
+          <span class="badge badge-primary badge-pill">3</span>
+        </a>
+        <!-- Versions item -->
+        <a class="list-group-item list-group-item-action align-items-center justify-content-between d-flex"
+        data-toggle="list" href="#versions" role="tab" id="versionsItem">
+          Versions
+          <span class="badge badge-primary badge-pill">9</span>
+        </a>
+        <!-- Snapshots item -->
+        <a class="list-group-item list-group-item-action align-items-center justify-content-between d-flex"
+        data-toggle="list" href="#snapshots" role="tab" id="snapshotsItem">
+          Snapshots
+          <span class="badge badge-primary badge-pill">5</span>
+        </a>
+      </div>
+      <div class="tab-content bg-light">
+        <!-- General tab with all articles about general -->
+        <div class="tab-pane active" id="generalTab" role="tabpanel">
+          <div class="jumbotron">
+            <br><br><br><br><br><br><br><br>general
+          </div>
+        </div>
+        <!-- Events tab with all articles about events -->
+        <div class="tab-pane" id="eventsTab" role="tabpanel">
+          <div class="jumbotron">
+            <br><br><br><br><br><br><br><br>events
+          </div>
+        </div>
+        <!-- Versions tab with all articles about versions -->
+        <div class="tab-pane" id="versionsTab" role="tabpanel">
+          <div class="jumbotron">
+            <br><br><br><br><br><br><br><br>versions
+          </div>
+        </div>
+        <!-- Snapshots tab with all articles about snapshots -->
+        <div class="tab-pane" id="snapshotsTab" role="tabpanel">
+          <div class="jumbotron">
+            <br><br><br><br><br><br><br><br>snapshots
+          </div>
+        </div>
+      </div>
+      <!-- previous & next -->
+      <nav>
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a id="previousItem" class="page-link">Previous</a></li>
+          <li class="page-item"><a id="nextItem" class="page-link">Next</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
