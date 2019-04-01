@@ -34,6 +34,31 @@ $(document).ready(function() {
   var tabIds = ["#generalTab", "#eventsTab", "#versionsTab", "#snapshotsTab"]
   var index = 0; // default index
 
+  $(".list-group-item").click(function() { // function used for setting index to clicked item
+    $(".tab-pane").removeClass("active"); // remove active from tabs, otherwise there will be multiple categories shown
+    switch ($(this).attr('id')) {
+      case "generalItem":
+        index = 0;
+        $(tabIds[0]).addClass("active");
+        break;
+
+      case "eventsItem":
+        index = 1;
+        $(tabIds[1]).addClass("active");
+        break;
+
+      case "versionsItem":
+        index = 2;
+        $(tabIds[2]).addClass("active");
+        break;
+
+      case "snapshotsItem":
+        index = 3;
+        $(tabIds[3]).addClass("active");
+        break;
+    }
+  });
+
 
   $("#nextItem").click(function() {
     if (index < 3) {
