@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
   function validateInput() {
     var nameReg = /^[a-z ,.'-]+$/mi;
     var addressReg = /^[A-Z]{1}?[a-z]+[\s]{1}?[0-9]/;
