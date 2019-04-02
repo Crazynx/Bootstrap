@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
   </head>
   <body>
-    <div class="row">
+
+    <div class="row"> <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="home.html">Minecraft</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -36,16 +39,12 @@
                 <a class="nav-link" href="comments.html">Comments</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
     </div>
 
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="myModal" class="modal fade" role="dialog"> <!-- Modal, activated on click of submit -->
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -55,25 +54,27 @@
             <p>If you want to send this information, press the send button.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" onclick="validateInput()" data-dismiss="modal">Send</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitForm">Send</button>
           </div>
         </div>
-
       </div>
     </div>
 
-
     <div class="container">
+
       <div class="row bg-dark">
         <div class="col-xl-9">
           <div class="jumbotron pad">
             <form>
+              <!-- Alert -->
               <div class="alert alert-warning collapse" role="alert" id="passwordsNoMatchRegister">
                 <span>
                 <p><strong>Ouch!</strong> Entered values don't match the requierements :(</p>
                 </span>
               </div>
+
               <div class="form-group">
+                <!-- Input for name, with info collapse-->
                 <label for="inputName">Name</label>
                 <input type="text" class="form-control" id="inputName" placeholder="Enter name">
                 <div class="collapse" id="collapseNameInfo">
@@ -86,8 +87,9 @@
                 </div>
               </div>
               <div class="form-group">
+                <!-- Input for address, with info collapse-->
                 <label for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Enter address">
                 <div class="collapse" id="collapseAddressInfo">
                   <div class="pl-2 card text-info bg-light">
                     <h5> Your address must meet the following requirements:</h5>
@@ -99,12 +101,14 @@
                   </div>
                 </div>
               </div>
+              <!-- Submit button, activates modal -->
               <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary">Submit</button>
             </form>
           </div>
         </div>
+        <!-- Zombie img, only visible on large screens -->
         <div class="col-lg-3 d-none d-lg-block">
-          <img class="img-fluid w-100 h-100" src="images/zombie.png" alt="">
+          <img class="img-fluid w-100 h-100" src="images/zombie.png">
         </div>
       </div>
     </div>
@@ -113,7 +117,6 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
